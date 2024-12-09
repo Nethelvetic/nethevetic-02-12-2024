@@ -3,7 +3,7 @@ import NavBarH from './navBar-H';
 
 const Header = () => {
   return (
-    <header className="w-full bg-blue-500 p-4">
+    <header className="w-full p-4">
       <NavBarH items={[
         { title: 'Accueil', link: '/' },
         { title: 'Blog', link: '/blog' },

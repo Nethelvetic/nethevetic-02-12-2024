@@ -6,15 +6,19 @@ const NavBarH = ({ items }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between bg-white fixed top-0 left-0 w-full border-b-0 border-b-white p-4">
-      <div className="logo mx-auto">
-        <img src="LogoNeth.png" alt="Logo" className="h-20" />
+    <nav className="flex items-center justify-between fixed top-0 left-0 w-full bg-black/50 backdrop-blur-sm py-4 px-8">
+      <div className="logo">
+        <img 
+          src="LogoNeth.png" 
+          alt="Logo" 
+          className="h-10 sm:h-14 md:h-16 lg:h-20"
+        />
       </div>
 
       {/* Menu visible sur grand écran */}
       <div className="hidden md:flex space-x-4">
         {items.map((item, index) => (
-          <a key={index} href={item.link} className="text-black hover:text-gray-600 font-openSansBold text-xl">
+          <a key={index} href={item.link} className="text-white hover:text-gray-200 font-openSansRegular">
             {item.title}
           </a>
         ))}
@@ -24,7 +28,7 @@ const NavBarH = ({ items }) => {
       <div className="md:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-black focus:outline-none text-3xl"
+          className="text-white focus:outline-none"
         >
           ☰
         </button>
@@ -32,9 +36,13 @@ const NavBarH = ({ items }) => {
 
       {/* Menu déroulant pour petit écran */}
       {isMenuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-white text-title-6-gradient flex flex-col space-y-2 md:hidden p-8">
+        <div className="fixed top-16 left-0 w-full bg-white flex flex-col space-y-2 md:hidden py-4 px-8">
           {items.map((item, index) => (
-            <a key={index} href={item.link} className="hover:text-gray-300 font-bebas text-title-2 text-transparent bg-clip-text bg-gradient text-center">
+            <a 
+              key={index} 
+              href={item.link} 
+              className="font-bebas text-center text-3xl text-transparent bg-clip-text bg-bg-gradient hover:opacity-80"
+            >
               {item.title}
             </a>
           ))}
