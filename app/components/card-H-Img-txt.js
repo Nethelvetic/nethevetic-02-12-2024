@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardHImgTxtLg = ({ imageSrc, title, children }) => {
+const CardHImgTxt = ({ imageSrc, title, children }) => {
   return (
     <div className="flex flex-row w-full bg-gray-800">
       {/* Image à gauche avec un arrondi personnalisé */}
@@ -25,4 +25,4 @@ const CardHImgTxtLg = ({ imageSrc, title, children }) => {
   );
 };
 
-export default CardHImgTxtLg;
+export default CardHImgTxt;

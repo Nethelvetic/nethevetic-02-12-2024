@@ -10,7 +10,7 @@ export default function HomePage() {
       <br></br>
 
       
-      <CardImgTitle imageSrc="jeroNum311.jpg" title="Construisez un business qui fonctionne pour vous, pas l’inverse 7"/>
+      <CardImgTitle imageSrc="jeroNum311.jpg" title="Construisez un business qui fonctionne pour vous, pas l’inverset "/>
 
 
       <CardHImgTxt imageSrc="jeroNum11Bg.png" title="">
