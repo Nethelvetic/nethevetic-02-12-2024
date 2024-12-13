@@ -16,12 +16,14 @@ module.exports = {
         openSansBold: ['Open Sans Bold', 'sans-serif'],
       },
       fontSize: {
-        'title-1': '65px',
-        'title-2': '46px',
-        'title-3': '34px',
-        'title-4': '28px',
-        'title-5': '14px',
-        'title-6': '85px',
+        'title-1': '85px',
+        'title-2': '65px',
+        'title-3': '46px',
+        'title-4': '34px',
+        'title-5': '26px',
+        'title-6': '20px',
+        'title-7': '14px',
+        'title-8': '12px'
       },
       backgroundImage: {
         'bg-gradient': 'linear-gradient(to right, #EB5E57, #4445D2)',
