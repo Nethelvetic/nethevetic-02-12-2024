@@ -1,29 +1,114 @@
 import CardHImgTxt from './components/card-H-Img-txt';
 import CardImgTitle from './components/card-Img-Title';
 import CardHTxtImg from './components/card-H-txt-Img';
+import CardVImgTxt from './components/card-V-Img-txt';
+import CardVTitreTxt from './components/card-V-Titre-text';
 
 
 export default function HomePage() {
   return (
     <div>
-      <br></br>
-      <br></br>
+      
+      {/*-----------------------------1 DEBUT COMPONENT Titre */}
+      <CardImgTitle imageSrc="jeroNum21Bg.png" title="Gérez mieux, vivez mieux "/>
+
 
       
-      <CardImgTitle imageSrc="jeroNum311.jpg" title="Construisez un business qui fonctionne pour vous, pas l’inverset "/>
+      {/*-----------------------------2 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
+        <CardVTitreTxt title="petit teste">
+          <p>
+            lorem100 
+          </p>
+        </CardVTitreTxt>
+      </div>
 
 
-      <CardHImgTxt imageSrc="jeroNum11Bg.png" title="">
-        <p>
-        Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
-        </p>
-       </CardHImgTxt>
 
-       <CardHTxtImg imageSrc="jeroNum11Bg.png" title="Là où la formation prend quelques minutes">
-        <p>
-        Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez. Plus de temps pour l’essentiel
-        </p>
-       </CardHTxtImg>
+
+
+      {/*-----------------------------2 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">
+
+        {/*----------------2.1 DEBUT COMPONENT  Carde horizontale texte image  */}
+        <CardHTxtImg imageSrc="jeroNum181bg.png" title="Titre de la Carte">
+          <p>
+          Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
+          </p>
+        </CardHTxtImg>
+      </div>
+
+
+
+
+
+     {/*-----------------------------3 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800 flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">
+
+         {/*----------------2.1 DEBUT COMPONENTE  Carde horizontale reverse image texte  */}
+        <CardHImgTxt imageSrc="jeroNum111Bg.png" title="Titre de la Carte">
+          <p>
+          Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
+          </p>
+        </CardHImgTxt>
+      </div>
+
+
+
+
+
+      {/*-----------------------------4 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800 flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">  
+         
+         {/*----------------4.1 DEBUT COMPONENT  Carde verticale image texte  */}
+          <CardVImgTxt imageSrc="jeroNum11Bg.png" title="Titre de la Carte">
+            <p>
+            Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
+            </p>
+          </CardVImgTxt>
+      </div>
+
+
+
+
+
+       {/*-----------------------------5 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800 flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">  
+
+        {/*----------------5.1 DEBUT  grid col 2x Carde verticale image texte  */}
+        <div className="
+                     grid 
+                     grid-cols-1 
+                     gap-4 
+                     md:grid-cols-2  
+                     w-full max-w-5xl">
+
+           {/*---5.2 DEBUT COMPONENT carte verticale image texte */}
+           <div>
+             <CardVImgTxt imageSrc="jeroNum311.jpg" title="Titre de la Carte">
+               <p>
+               Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
+               </p>
+             </CardVImgTxt>
+           </div>
+
+
+           {/*---5.3 DEBUT COMPONENT carte verticale image texte */}
+           <div>
+            <CardVImgTxt imageSrc="jeroNum221Bg.png" title="Titre de la Carte">
+              <p>
+              Je m’appelle Jérome Golliard, entrepreneur autodidacte passionné d’IA et d’automatisation. Solo entrepreneur, mon ambition ? Créer des assistants IA, nourris de votre intelligence, pour réaliser vos tâches pendant que vous dormez.
+              </p>
+            </CardVImgTxt>
+           </div>
+
+        </div>
+        {/*----------------5.1 FIN  grid col 2x Carde verticale image texte  */}
+
+      </div>
+      {/*-----------------------------5 FIN CONTENEUR A */}
+
     </div>
+
   );
 }

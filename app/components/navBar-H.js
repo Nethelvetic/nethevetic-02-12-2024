@@ -6,7 +6,7 @@ const NavBarH = ({ items }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between fixed top-0 left-0 w-full bg-black/50 backdrop-blur-sm py-4 px-8">
+    <nav className="flex items-center justify-between fixed top-0 left-0 w-full bg-gray-800/70 backdrop-blur-sm py-4 px-8 z-50">
       <div className="logo">
         <img 
           src="LogoNeth.png" 
@@ -36,7 +36,7 @@ const NavBarH = ({ items }) => {
 
       {/* Menu déroulant pour petit écran */}
       {isMenuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-white flex flex-col space-y-2 md:hidden py-4 px-8">
+        <div className="fixed top-16 left-0 w-full bg-white/80 backdrop-blur-md flex flex-col space-y-2 md:hidden py-4 px-8">
           {items.map((item, index) => (
             <a 
               key={index} 
