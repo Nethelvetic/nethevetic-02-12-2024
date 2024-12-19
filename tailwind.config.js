@@ -27,10 +27,9 @@ module.exports = {
       },
       backgroundImage: {
         'bg-gradient': 'linear-gradient(to right, #EB5E57, #4445D2)',
+        'bg-gradient2': 'linear-gradient(to right, #000E59, #AF8FF7)',
       },
-      colors: {
-        'special-border': 'linear-gradient(to right, #EB5E57, #4445D2)', // Ajoute ici une couleur de ton choix pour la bordure
-      },
+
     },
   },
   plugins: [],

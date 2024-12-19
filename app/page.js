@@ -3,22 +3,23 @@ import CardImgTitle from './components/card-Img-Title';
 import CardHTxtImg from './components/card-H-txt-Img';
 import CardVImgTxt from './components/card-V-Img-txt';
 import CardVTitreTxt from './components/card-V-Titre-text';
+import AnimationTest from './components/animation-test';
 
 
 export default function HomePage() {
   return (
+    
     <div>
-      
       {/*-----------------------------1 DEBUT COMPONENT Titre */}
-      <CardImgTitle imageSrc="jeroNum21Bg.png" title="Gérez mieux, vivez mieux "/>
+      <CardImgTitle imageSrc="jeroNum311.jpg" title="Gérez mieux, vivez mieux "/>
 
 
       
       {/*-----------------------------2 DEBUT CONTENEUR A */}
       <div className="bg-gray-800  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
-        <CardVTitreTxt title="petit teste">
+        <CardVTitreTxt title="Découvrez par vous-même comment l'IA peut vous simplifier la vie">
           <p>
-            lorem100 
+          Posez une question ou donnez une tâche, et voyez comment un assistant IA peut travailler à votre place. 
           </p>
         </CardVTitreTxt>
       </div>
