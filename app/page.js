@@ -3,7 +3,7 @@ import CardImgTitle from './components/card-Img-Title';
 import CardHTxtImg from './components/card-H-txt-Img';
 import CardVImgTxt from './components/card-V-Img-txt';
 import CardVTitreTxt from './components/card-V-Titre-text';
-import AnimationTest from './components/animation-test';
+import BoutonChatBot from './components/boutonChatBot';
 
 
 export default function HomePage() {
@@ -17,11 +17,33 @@ export default function HomePage() {
       
       {/*-----------------------------2 DEBUT CONTENEUR A */}
       <div className="bg-gray-800  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
-        <CardVTitreTxt title="Découvrez par vous-même comment l'IA peut vous simplifier la vie">
+        <CardVTitreTxt title="Découvrez par vous-même comment vous simplifier la vie">
           <p>
           Posez une question ou donnez une tâche, et voyez comment un assistant IA peut travailler à votre place. 
           </p>
         </CardVTitreTxt>
+      </div>
+
+
+
+
+
+      {/*-----------------------------4 DEBUT CONTENEUR A */}
+      <div className="bg-gray-800 flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">  
+         
+      {/*----------------4.1 DEBUT COMPONENT  Carde verticale image texte  */}
+       <CardVImgTxt imageSrc="jeroNum11Bg.png" title="À propos de Jérôme Golliard">
+         <p>J'accompagne les entrepreneurs et solopreneurs dans la création et le développement de leur entreprise.
+         <br></br>
+         <br></br>
+          Mon rôle est de simplifier les démarches administratives et juridiques, en proposant une approche accessible et personnalisée pour transformer vos idées en projets concrets.
+         <br></br>
+         <br></br>
+         Mon objectif est de rendre chaque étape de l’entrepreneuriat plus simple et efficace, tout en respectant votre rythme et vos besoins.
+         <br></br>
+         <br></br>
+         <strong>Je suis là pour vous aider à démarrer sereinement et à vous concentrer sur ce qui compte vraiment.</strong></p>
+       </CardVImgTxt>
       </div>
 
 
