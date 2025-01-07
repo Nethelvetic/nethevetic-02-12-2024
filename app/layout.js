@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
   return (
     <html lang="fr" className="h-full bg-gray-800">
       <body className="min-h-screen h-full bg-gray-800">
+        
         {/* Conteneur fixe pour le Header */}
         <div className="fixed top-0 left-0 w-full z-50">
           <Header />
