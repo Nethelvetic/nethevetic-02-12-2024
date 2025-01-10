@@ -34,10 +34,10 @@ useEffect(() => {
       x: 0,
       opacity: 1,
       duration: 2,
-      ease: "power3.out",
+      ease: "power1.out",
       scrollTrigger : {
           trigger: titleRef.current, 
-          start: "top 50%", 
+          start: "top 60%", 
           end: "bottom 110%",
           markers : true,
           scrub: 3,

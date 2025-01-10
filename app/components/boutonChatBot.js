@@ -2,21 +2,41 @@
 
 import React, { useState } from 'react';
 
-const BoutonChatBot = () => {
+const BoutonChatBot = ({ title }) => {
+
+
+
+//---------------------------------------------------------------------
+//-------------------------1 Début data dynamique ---------------------
+//---------------------------------------------------------------------
   const [isChatOpen, setIsChatOpen] = useState(false);
 
+
+
+
+//---------------------------------------------------------------------
+//------------------------2 Début comportement ------------------------
+//---------------------------------------------------------------------
   const handleChatToggle = () => {
     setIsChatOpen(!isChatOpen);
   };
 
+
+
+//---------------------------------------------------------------------
+//------------------------3 Début affichage ---------------------------
+//---------------------------------------------------------------------
   return (
+
+
+
+    //-----------------------------1 DEBUT CONTENEUR B
     <div>
       {/* Button */}
       <button
         onClick={handleChatToggle}
-        className="mt-6 px-6 py-3 bg-bg-gradient hover:bg-bg-gradient2 text-white font-bold rounded-lg"
-      >
-        Test mon chatbot maintenant
+        className="px-3 py-3 bg-bg-gradient hover:bg-bg-gradient2 text-white font-bold rounded-lg">
+        {title}
       </button>
 
       {/* Surimpression */}
@@ -33,6 +53,7 @@ const BoutonChatBot = () => {
         </div>
       )}
     </div>
+     //-----------------------------1 Fin CONTENEUR B
   );
 };
 

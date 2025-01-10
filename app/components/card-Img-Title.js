@@ -7,24 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Enregistrement du plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
-
 const CardImgTitle = ({ imageSrc, title }) => {
+  //---------------------------------------------------------------------
+  //-------------------------1 Début data dynamique ---------------------
+  //---------------------------------------------------------------------
+  const titleRef = useRef(null);
 
-
-//---------------------------------------------------------------------
-//-------------------------1 Début data dynamique ---------------------
-//---------------------------------------------------------------------
-const titleRef = useRef(null);
-
-
-
-
-//---------------------------------------------------------------------
-//------------------------2 Début comportement ------------------------
-//---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  //------------------------2 Début comportement ------------------------
+  //---------------------------------------------------------------------
   useEffect(() => {
     // Animation GSAP avec ScrollTrigger
     gsap.fromTo(
@@ -35,29 +26,25 @@ const titleRef = useRef(null);
         opacity: 1,
         duration: 2,
         ease: "power3.out",
-        scrollTrigger : {
-            trigger: titleRef.current, 
-            start: "top 10%", 
-            end: "bottom 110%",
-            markers : true,
-            scrub: 3,
-            pin: true
-        } 
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 10%",
+          end: "bottom 110%",
+          markers: true,
+          scrub: 3,
+          pin: true,
+        },
       }
     );
   }, []);
 
-
-
-
-//---------------------------------------------------------------------
-//------------------------3 Début affichage ---------------------------
-//---------------------------------------------------------------------
+  //---------------------------------------------------------------------
+  //------------------------3 Début affichage ---------------------------
+  //---------------------------------------------------------------------
   return (
     //----------------------1 DEBUT CONTENEUR B
-    <div className="relative w-full bg-gray-800 flex items-center justify-center pt-16 pb-6 px-12">
+    <div className="relative w-full bg-transparent flex items-center justify-center pt-16 pb-6 px-12">
       <div className="relative">
-
         {/* Image ronde, agrandie et responsive avec animation */}
         <img
           src={imageSrc}
@@ -66,7 +53,7 @@ const titleRef = useRef(null);
           ref={titleRef}
         />
 
-        {/* Titre*/}
+        {/* Titre */}
         <div
           className="absolute top-0 w-full flex items-center justify-center pt-10 px-4"
         >
@@ -76,7 +63,7 @@ const titleRef = useRef(null);
         </div>
       </div>
     </div>
-    //----------------------1 DEBUT CONTENEUR B
+    //----------------------1 FIN CONTENEUR B
   );
 };
 

@@ -34,13 +34,13 @@ useEffect(() => {
       x: 0,
       opacity: 1,
       duration: 2,
-      ease: "power3.out",
+      ease: "power1.out",
       scrollTrigger : {
           trigger: titleRef.current, 
-          start: "top 50%", 
+          start: "top 60%", 
           end: "bottom 110%",
           markers : true,
-          scrub: 3,
+          scrub: 6,
           pin: true
       } 
     }
@@ -63,7 +63,7 @@ useEffect(() => {
         <h1 className="font-bebas text-2xl sm:text-3xl md:text-4xl mb-4 bg-bg-gradient text-transparent bg-clip-text filter brightness-50">
           {title}
         </h1>
-        <div className="text-base sm:text-lg md:text-xl text-white">
+        <div className="text-base sm:text-lg md:text-xl text-white ">
           {children}
         </div>
       </div>

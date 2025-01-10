@@ -4,23 +4,15 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 
 const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
-  // Références pour chaque image
   const imageRefs = useRef([]);
-
-  // Stockage de l'angle de rotation pour chaque image
   const rotationAngles = useRef([]);
 
-  // Fonction d'animation GSAP
   const handleMouseEnter = (index) => {
-    // Initialiser l'angle de rotation si ce n'est pas fait
     if (!rotationAngles.current[index]) {
       rotationAngles.current[index] = 0;
     }
-
-    // Ajouter 360° à l'angle existant
     rotationAngles.current[index] += 360;
 
-    // Appliquer la rotation
     gsap.to(imageRefs.current[index], {
       rotation: rotationAngles.current[index],
       duration: 1,
@@ -30,7 +22,7 @@ const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
 
   return (
     //-----------------------------1 DEBUT CONTENEUR B
-    <div className="flex flex-col justify-center w-full items-center text-white p-6 text-center max-w-5xl backdrop-blur-sm relative rounded-lg overflow-hidden">
+    <div className="flex flex-col justify-center w-full items-center text-gray-400 p-6 text-center max-w-5xl backdrop-blur-sm relative rounded-lg overflow-hidden">
       {/* Titre colonne 1 */}
       <div>
         <h1 className="font-bebas text-2xl sm:text-3xl md:text-4xl mb-4 bg-bg-gradient text-transparent bg-clip-text">
@@ -58,7 +50,7 @@ const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
             </button>
             {/* Texte sous le bouton */}
             <div
-              className="mt-2 text-sm text-gray-300 text-center break-words"
+              className="mt-2 text-sm text-center break-words"
               style={{ maxWidth: "10rem", wordWrap: "break-word" }}
               dangerouslySetInnerHTML={{ __html: txtBouton[index] }}
             ></div>
