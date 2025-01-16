@@ -54,7 +54,7 @@ useEffect(() => {
 //------------------------3 Début affichage ---------------------------
 //---------------------------------------------------------------------
   return (
-    //----------------------1 DEBUT CONTENEUR B
+     //-----------------------------1 DEBUT PRIMAIRE
     <div
       className=" flex flex-col-reverse items-center w-full max-w-5xl bg-bg-gradient bg-opacity-90 backdrop-blur-sm relative rounded-lg shadow-lg overflow-hidden">
 
@@ -77,7 +77,7 @@ useEffect(() => {
         />
       </div>
     </div>
-    //----------------------1 FIN CONTENEUR B
+     //-----------------------------1 FIN PRIMAIRE
   );
 };
 

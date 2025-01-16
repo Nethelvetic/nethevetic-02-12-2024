@@ -6,74 +6,95 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./globals.css";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Layout = ({ children }) => {
+
+
+
+export default function Layout({ children }) {
+
+
+
+
+  //---------------------------------------------------------------------
+  //-------------------------1 Début data dynamique ---------------------
+  //---------------------------------------------------------------------
+  const pathname = usePathname();
+
   useEffect(() => {
-    const mm = gsap.matchMedia();
+    // Fonction pour configurer les animations
+    const setupAnimations = () => {
+      if (typeof window === "undefined") return;
 
-    // Configuration des animations en fonction des breakpoints
-    mm.add(
-      {
-        // Pour les écrans larges (1024px et plus)
-        isLarge: "(min-width: 1024px)",
-        // Pour les petits écrans (moins de 1024px)
-        isSmall: "(max-width: 1023px)",
-      },
-      (context) => {
-        const { isLarge, isSmall } = context.conditions;
+      // Nettoyer les anciens triggers
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
-        if (isLarge) {
-          // Animation pour grand écran
-          gsap.to("html, body", {
-            backgroundColor: "#ffffff",
-            duration: 2,
-            scrollTrigger: {
-              trigger: "html",
-              start: "440% 40%", // Start pour grand écran
-              end: "bottom bottom",
-              scrub: 3,
-              markers: true,
-            },
-          });
-        }
+      // Recalculer la hauteur dynamique et configurer l'animation
+      const docHeight = document.documentElement.scrollHeight;
 
-        if (isSmall) {
-          // Animation pour petit écran
-          gsap.to("html, body", {
-            backgroundColor: "#ffffff",
-            duration: 2,
-            scrollTrigger: {
-              trigger: "html",
-              start: "280% 40%", // Start pour petit écran
-              end: "bottom bottom",
-              scrub: 3,
-              markers: true,
-            },
-          });
-        }
+      const getHalfPageStart = () => {
+        return docHeight / 2 + " top";
+      };
+
+      gsap.to("html, body", {
+        backgroundColor: "#ffffff",
+        duration: 2,
+        scrollTrigger: {
+          trigger: "html",
+          start: getHalfPageStart(),
+          end: "bottom bottom",
+          scrub: 3,
+          markers: true,
+        },
+      });
+
+      // Rafraîchir les triggers pour prendre en compte la nouvelle hauteur
+      ScrollTrigger.refresh();
+    };
+
+    // Initialiser les animations au premier rendu
+    setupAnimations();
+
+    // Réinitialiser les animations sur changement de page
+    const handlePageShow = (event) => {
+      if (event.persisted) {
+        ScrollTrigger.refresh();
+        setupAnimations();
       }
-    );
+    };
 
-    return () => mm.revert(); // Nettoie les animations au démontage du composant
-  }, []);
+    window.addEventListener("pageshow", handlePageShow);
 
+    return () => {
+      window.removeEventListener("pageshow", handlePageShow);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [pathname]); // Recalculer à chaque changement de page
+
+
+
+
+//---------------------------------------------------------------------
+//------------------------3 Début affichage ---------------------------
+//---------------------------------------------------------------------
   return (
-    <html lang="fr" className="h-full">
-      <body className="min-h-screen h-full bg-gray-800">
-        {/* Conteneur fixe pour le Header */}
-        <div className="fixed top-0 left-0 w-full z-50">
-          <Header />
+    <html lang="fr">
+      <body className="bg-gray-800">
+        <div key={pathname} className="flex flex-col min-h-screen">
+          {/* Header */}
+          <div className="fixed top-0 left-0 w-full z-50">
+            <Header />
+          </div>
+
+          {/* Main content */}
+          <main className="flex-grow pt-24">{children}</main>
+
+          {/* Footer */}
+          <Footer />
         </div>
-
-        {/* Ajout d'un padding-top pour laisser la place au header */}
-        <main className="pt-24">{children}</main>
-
-        <Footer />
       </body>
     </html>
   );
-};
-
-export default Layout;
+}

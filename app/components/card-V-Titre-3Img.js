@@ -4,9 +4,15 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 
 const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
+  //---------------------------------------------------------------------
+  //-------------------------1 Début data dynamique ---------------------
+  //---------------------------------------------------------------------
   const imageRefs = useRef([]);
   const rotationAngles = useRef([]);
 
+  //---------------------------------------------------------------------
+  //------------------------2 Début comportement ------------------------
+  //---------------------------------------------------------------------
   const handleMouseEnter = (index) => {
     if (!rotationAngles.current[index]) {
       rotationAngles.current[index] = 0;
@@ -20,9 +26,12 @@ const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
     });
   };
 
+  //---------------------------------------------------------------------
+  //------------------------3 Début affichage ---------------------------
+  //---------------------------------------------------------------------
   return (
-    //-----------------------------1 DEBUT CONTENEUR B
-    <div className="flex flex-col justify-center w-full items-center text-gray-400 p-6 text-center max-w-5xl backdrop-blur-sm relative rounded-lg overflow-hidden">
+    //-----------------------------1 DEBUT PRIMAIRE
+    <div className="flex flex-col justify-center w-full items-center text-gray-400 p-6 text-center max-w-5xl backdrop-blur-sm relative rounded-lg overflow-hidden py-10 sm:py-14 md:py-16 lg:py-20">
       {/* Titre colonne 1 */}
       <div>
         <h1 className="font-bebas text-2xl sm:text-3xl md:text-4xl mb-4 bg-bg-gradient text-transparent bg-clip-text">
@@ -50,7 +59,7 @@ const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
             </button>
             {/* Texte sous le bouton */}
             <div
-              className="mt-2 text-sm text-center break-words"
+              className="mt-2 text-center break-words text-base sm:text-lg md:text-xl"
               style={{ maxWidth: "10rem", wordWrap: "break-word" }}
               dangerouslySetInnerHTML={{ __html: txtBouton[index] }}
             ></div>
@@ -58,7 +67,7 @@ const CardVTitre3Img = ({ imagesSrc, txtBouton, title }) => {
         ))}
       </div>
     </div>
-    //-----------------------------1 FIN CONTENEUR B
+    //-----------------------------1 FIN PRIMAIRE
   );
 };
 

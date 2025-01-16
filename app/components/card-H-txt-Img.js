@@ -54,8 +54,9 @@ useEffect(() => {
 //------------------------3 Début affichage ---------------------------
 //---------------------------------------------------------------------
   return (
+     //-----------------------------1 DEBUT PRIMAIRE
     <div
-      className=" flex flex-row w-full max-w-5xl bg-bg-gradient relative rounded-lg shadow-lg overflow-hidden"ref={titleRef}>
+      className="flex flex-row w-full max-w-5xl bg-bg-gradient relative rounded-lg shadow-lg overflow-hidden "ref={titleRef}>
 
       {/* Contenu à gauche */}
       <div className="flex flex-col justify-center w-full sm:w-2/3 text-white relative p-6">
@@ -77,6 +78,7 @@ useEffect(() => {
           className=" relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain brightness-125 rounded-full"/>
       </div>
     </div>
+     //-----------------------------1 DEBUT PRIMAIRE
   );
 };
 

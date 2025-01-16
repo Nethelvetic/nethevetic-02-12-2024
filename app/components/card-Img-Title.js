@@ -2,38 +2,24 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// Enregistrement du plugin ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
 
 const CardImgTitle = ({ imageSrc, title }) => {
   //---------------------------------------------------------------------
   //-------------------------1 Début data dynamique ---------------------
   //---------------------------------------------------------------------
-  const titleRef = useRef(null);
+  const imageContainerRef = useRef(null);
 
-  //---------------------------------------------------------------------
-  //------------------------2 Début comportement ------------------------
-  //---------------------------------------------------------------------
   useEffect(() => {
-    // Animation GSAP avec ScrollTrigger
+    if (!imageContainerRef.current) return;
+
+    // Animation de l'image (opacité uniquement)
     gsap.fromTo(
-      titleRef.current,
-      { x: -300, opacity: 0 },
+      imageContainerRef.current,
+      { opacity: 0 },
       {
-        x: 0,
         opacity: 1,
-        duration: 2,
+        duration: 14,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 10%",
-          end: "bottom 110%",
-          markers: true,
-          scrub: 3,
-          pin: true,
-        },
       }
     );
   }, []);
@@ -42,28 +28,43 @@ const CardImgTitle = ({ imageSrc, title }) => {
   //------------------------3 Début affichage ---------------------------
   //---------------------------------------------------------------------
   return (
-    //----------------------1 DEBUT CONTENEUR B
-    <div className="relative w-full bg-transparent flex items-center justify-center pt-16 pb-6 px-12">
-      <div className="relative">
-        {/* Image ronde, agrandie et responsive avec animation */}
-        <img
-          src={imageSrc}
-          alt={title}
-          className="w-[18rem] h-[22rem] sm:w-[22rem] sm:h-[28rem] md:w-[22rem] md:h-[28rem] lg:w-[26rem] lg:h-[34rem] xl:w-[34rem] xl:h-[46rem] object-cover mx-auto brightness-125 rounded-full"
-          ref={titleRef}
-        />
-
-        {/* Titre */}
+    // ------------------------1 DEBUT  conteneur primaire
+    <div className="relative w-full bg-transparent flex flex-col items-center justify-center py-6 sm:py-8 md:py-10">
+      {/* Conteneur animé (photo avec cadre rouge) */}
+      <div
+        ref={imageContainerRef}
+        className="relative z-10 w-full flex justify-center pb-2 sm:pb-4 md:pb-8">
         <div
-          className="absolute top-0 w-full flex items-center justify-center pt-10 px-4"
-        >
-          <h1 className="font-bebas text-center text-transparent bg-clip-text bg-bg-gradient text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl line-clamp-2">
-            {title}
-          </h1>
+          className="p-2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+          <img
+            src={imageSrc}
+            alt={title}
+            className="
+              w-full max-h-[50vh] sm:max-h-[60vh] md:max-h-[80vh]
+              object-contain
+              brightness-125
+              rounded-md
+            "
+          />
         </div>
       </div>
+
+      {/* Titre avec texte en blanc */}
+      <h1
+        className="
+          absolute z-20 left-0 w-full
+          top-[15%] sm:top-[15%] md:top-[15%]
+          font-bebas
+          text-center
+          text-white
+          text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+          line-clamp-2
+        "
+      >
+        {title}
+      </h1>
     </div>
-    //----------------------1 FIN CONTENEUR B
+    // ------------------------1 FIN conteneur primaire
   );
 };
 
