@@ -20,7 +20,7 @@ export default function PageAccueil({showCommunaute}) {
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
-//------------------------2 Début comportement ------------------------
+//------------------------2 Début affichage   -------------------------
 //--------------------------------------------------------------------- 
     return (
 
@@ -70,7 +70,7 @@ export default function PageAccueil({showCommunaute}) {
         {/*-----------------------------4 DEBUT CONTENEUR A */}
         <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">  
   
-          {/*----------------4.1 DEBUT  grid col 2x Carde verticale image texte  */}
+          {/*----------------4.1 DEBUT  grid col 2x Carde verticale -image -texte -bouton  */}
           <div className="grid  grid-cols-1 gap-0 ">
            
             {/*-----4.2.1 DEBUT COMPONENT  Carde verticale image texte  */}

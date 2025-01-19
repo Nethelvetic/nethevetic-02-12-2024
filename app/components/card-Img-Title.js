@@ -1,41 +1,72 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+// import 'intersection-observer'; // <-- Optionnel si besoin pour iOS < 12.2
 
 const CardImgTitle = ({ imageSrc, title }) => {
-  //---------------------------------------------------------------------
-  //-------------------------1 Début data dynamique ---------------------
-  //---------------------------------------------------------------------
+
+
+
+//---------------------------------------------------------------------
+//-------------------------1 Début data dynamique ---------------------
+//---------------------------------------------------------------------
+
   const imageContainerRef = useRef(null);
 
   useEffect(() => {
-    if (!imageContainerRef.current) return;
+    const element = imageContainerRef.current;
 
-    // Animation de l'image (opacité uniquement)
-    gsap.fromTo(
-      imageContainerRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 14,
-        ease: "power3.out",
-      }
-    );
+    // On place l'élément à opacité 0 avant l'observation
+    gsap.set(element, { opacity: 0 });
+
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Quand l'élément entre dans la vue, on lance l'animation
+          gsap.fromTo(
+            element,
+            { opacity: 0 },
+            {
+              opacity: 1,
+              duration: 14,  // Garde la durée de 14s, adaptée à tes besoins
+              ease: "power3.out",
+            }
+          );
+        } else {
+          // Quand l’élément sort de la vue, on le réinitialise
+          gsap.set(element, { opacity: 0 });
+        }
+      });
+    };
+
+    // On déclenche l'intersection dès que l'élément commence à entrer dans la vue
+    const options = {
+      threshold: 0.0,
+      // rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(element);
+
+    // Nettoyage si le composant se démonte
+    return () => observer.disconnect();
   }, []);
 
-  //---------------------------------------------------------------------
-  //------------------------3 Début affichage ---------------------------
-  //---------------------------------------------------------------------
+
+
+
+//---------------------------------------------------------------------
+//------------------------2 Début affichage ---------------------------
+//---------------------------------------------------------------------
   return (
     // ------------------------1 DEBUT  conteneur primaire
     <div className="relative w-full bg-transparent flex flex-col items-center justify-center py-6 sm:py-8 md:py-10">
       {/* Conteneur animé (photo avec cadre rouge) */}
       <div
         ref={imageContainerRef}
-        className="relative z-10 w-full flex justify-center pb-2 sm:pb-4 md:pb-8">
-        <div
-          className="p-2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+        className="relative z-10 w-full flex justify-center pb-2 sm:pb-4 md:pb-8"
+      >
+        <div className="p-2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
           <img
             src={imageSrc}
             alt={title}

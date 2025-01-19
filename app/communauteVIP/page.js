@@ -1,8 +1,6 @@
-"use client";
+"use client"; 
 
 import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CardImgTitle from '../components/card-Img-Title';
 import CardVTitreTxt from '../components/card-V-Titre-text';
 import BoutonCandidate from '../components/boutonCandidate';
