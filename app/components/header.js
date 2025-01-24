@@ -6,6 +6,7 @@ const Header = () => {
     <header className="w-full p-4">
       <NavBarH items={[
         { title: 'Accueil', link: '/' },
+        { title: 'Communauté', link: '/communauteVIP' },
         { title: 'Blog', link: '/blog' },
         { title: 'Contact', link: '/contact' }
       ]} />

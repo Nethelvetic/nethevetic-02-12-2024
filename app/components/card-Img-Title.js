@@ -60,7 +60,7 @@ const CardImgTitle = ({ imageSrc, title }) => {
 //---------------------------------------------------------------------
   return (
     // ------------------------1 DEBUT  conteneur primaire
-    <div className="relative w-full bg-transparent flex flex-col items-center justify-center py-6 sm:py-8 md:py-10">
+    <div className="flex flex-col w-full max-w-5xl relative  overflow-hidden p-4 sm:p-6 md:p-8 lg:p-10">
       {/* Conteneur animé (photo avec cadre rouge) */}
       <div
         ref={imageContainerRef}

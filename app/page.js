@@ -28,6 +28,5 @@ export default function HomePage() {
       <PageAccueil/>
       </div>
     </AnimationLayout>
-    
   );
 }

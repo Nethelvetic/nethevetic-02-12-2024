@@ -6,20 +6,23 @@ const CardVTitreTxt = ({ title, children }) => {
 
 
 
-  
+
   //---------------------------------------------------------------------
   //------------------------3 Début affichage ---------------------------
   //---------------------------------------------------------------------
   return (
     //-----------------------------1 DEBUT PRIMAIRE
-    <div className="flex flex-col justify-center w-full items-center p-1 text-center max-w-5xl backdrop-blur-sm relative rounded-lg overflow-hidden">
+    <div className="flex flex-col  w-full max-w-5xl relative  overflow-hidden  p-4 sm:p-6 md:p-8 lg:p-10">
+
       {/* Titre */}
-      <h1 className="font-bebas text-2xl sm:text-3xl md:text-4xl mt-2 sm:mt-0 mb-4 bg-bg-gradient text-transparent bg-clip-text">
-        {title}
-      </h1>
+      <div>
+        <h1 className="flex justify-center font-bebas text-2xl sm:text-3xl md:text-4xl mt-2 sm:mt-0 mb-4 bg-bg-gradient text-transparent bg-clip-text">
+          {title}
+        </h1>
+      </div>
 
       {/* Children */}
-      <div className="text-gray-400 text-base sm:text-lg md:text-xl sm:px-4 md:px-16 lg:px-24 mb-6 md:mb-10 lg:mb-12">
+      <div className="flex justify-center  text-gray-400 font-openSansRegular text-base sm:text-lg md:text-xl p-4 sm:p-6 md:p-8 lg:p-10">
         {children}
       </div>
     </div>

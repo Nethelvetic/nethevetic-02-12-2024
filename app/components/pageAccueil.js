@@ -68,37 +68,23 @@ export default function PageAccueil({showCommunaute}) {
   
   
         {/*-----------------------------4 DEBUT CONTENEUR A */}
-        <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 ">  
+        <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">  
   
-          {/*----------------4.1 DEBUT  grid col 2x Carde verticale -image -texte -bouton  */}
-          <div className="grid  grid-cols-1 gap-0 ">
-           
             {/*-----4.2.1 DEBUT COMPONENT  Carde verticale image texte  */}
             <div>
-              <CardVImgTxt imageSrc="jeroNum11Bg.png" title="À propos de Jérôme Golliard">
-                <p>J'accompagne les entrepreneurs et solopreneurs dans la création et le développement de leur entreprise.
+              <CardVImgTxt imageSrc="teamAbstrait.webp" title="Et si tu pouvais cloner ton équipe ? Je l’ai fait… sans exploser mon budget.">
+                <p>Moi aussi, j’ai connu le stress de tout faire toute seule : gérer les plannings, facturer, produire du contenu, répondre aux emails… Et puis, j’ai découvert des solutions qui change la donne.
                 <br></br>
                 <br></br>
-                 Mon rôle est de simplifier les démarches administratives et juridiques, en proposant une approche accessible et personnalisée pour transformer vos idées en projets concrets.
+                Pendant longtemps, je croyais que c’était réservé aux grandes entreprises avec des budgets énormes. Mais aujourd’hui, grâce aux bons outils et à la bonne méthodologie, c’est à la portée de tous.
                 <br></br>
                 <br></br>
-                Mon objectif est de rendre chaque étape de l’entrepreneuriat plus simple et efficace, tout en respectant votre rythme et vos besoins.
+                <strong>Le meilleur dans tout ça ?</strong>
                 <br></br>
-                <br></br>
-                <strong>Je suis là pour vous aider à démarrer sereinement et à vous concentrer sur ce qui compte vraiment.</strong></p>
+                Je n’ai plus besoin de tout faire moi-même. Je peux enfin me concentrer sur ce qui apporte vraiment de la valeur à mon business (et profiter de ma famille le soir)..</p>
               </CardVImgTxt>
             </div>
             {/*-----4.2.1 FIN COMPONENT  Carde verticale image texte  */}
-  
-  
-            {/*-----4.2.2  DEBUT CONTENEUR A */}
-            <div className="bg-transparent  flex justify-center items-center mt-3">
-              {/*4.2.2.1 DEBUT COMPONENT  bouton via page communauter  */}
-              <BoutonChatBot title="test mon chatbot"/>
-            </div>
-  
-          </div>
-           {/*----------------4.1 FIN  grid col 2x Carde verticale image texte  */}
         </div>
         {/*-----------------------------4 FIN CONTENEUR A */}
   
@@ -106,7 +92,7 @@ export default function PageAccueil({showCommunaute}) {
   
   
         {/*-----------------------------5 DEBUT CONTENEUR A */}
-        <div className="bg-transparent flex justify-center items-center mt-5">
+        <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
   
           {/*----------------5.1 DEBUT COMPONENT  Carde verticale titre et 3 x images  */}
           <CardVTitre3Img
@@ -117,10 +103,16 @@ export default function PageAccueil({showCommunaute}) {
               "jeroNum391.jpg",
             ]}
             txtBouton={[
-              "<p><strong>Création d’entreprise rapide.</strong></p><br><p>Créer ton entreprise en Suisse, en simplifiant toutes les démarches.</p>",
-              "<p><strong>Automatiser les tâches répétitives</strong></p><br><p>Libère jusqu'à 20 heures par semaine.</p>",
-              "<p><strong>Des assistants IA dédiés</strong></p><br><p>Pendant que tu dors, ils travaillent pour toi.</p>",
-              "<p><strong>Facture - Offre - Comptabilité.</strong></p><br><p>Des applications prêts à l’emploi pour organiser ton entreprise.<p>",
+              { label: "Voir plus", url: "/somePage" },
+              { label: "Contact2", url: "/contact" },
+              { label: "Contact3", url: "/contact" },
+              { label: "Contact4", url: "/contact" }
+            ]}
+            txt={[
+              "<p><strong>Création d’entreprise rapide.</strong></p><p>Créer ton entreprise en Suisse, en simplifiant toutes les démarches.</p>",
+              "<p><strong>Automatiser les tâches répétitives</strong></p><p>Libère jusqu'à 20 heures par semaine.</p>",
+              "<p><strong>Votre équipe d'IA personnalisée </strong></p><p>Pendant que tu dors, ils travaillent pour toi.</p>",
+              "<p><strong>Facture - Offre - Comptabilité.</strong></p><p>Des applications prêts à l’emploi pour organiser ton entreprise.<p>",
             ]}
             title="Le collaborateur unique pour toutes les tâches"
           />
@@ -151,7 +143,7 @@ export default function PageAccueil({showCommunaute}) {
   
         
         {/*-----------------------------7 DEBUT CONTENEUR A */}
-        <div className="bg-transparent  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10 mt-20">
+        <div className="bg-transparent  flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
   
           {/*----------------7.1 DEBUT  grid col 2x Carde verticale image texte  */}
           <div className="grid  grid-cols-1 gap-0 ">
