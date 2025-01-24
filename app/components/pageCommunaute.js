@@ -5,6 +5,8 @@ import CardVTitreTxt from './card-V-Titre-text';
 import CardVTitre3Img from './card-V-Titre-3Img';
 import BoutonCandidate from './boutonCandidate';
 import CardVImgTxt from './card-V-Img-txt'
+import BoutonEvent from './boutonEvent';
+import BoutonNewsLetter from './boutonNewsLetter';
 
 
 
@@ -66,7 +68,7 @@ export default function PageCommunaute({showCommunaute}) {
 
       
 
-      {/*-----------------------------6 DEBUT CONTENEUR A */}
+      {/*-----------------------------4 DEBUT CONTENEUR A */}
       <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
 
         <CardTitleText imageSrc="" title="Notre ADN : la confrontation pour construire">
@@ -93,10 +95,9 @@ export default function PageCommunaute({showCommunaute}) {
 
         </CardTitleText>
       </div>
+      {/*-----------------------------4 FIN CONTENEUR A */}
 
     
-
-
 
 
       {/*-----------------------------5 DEBUT CONTENEUR A */}
@@ -118,7 +119,8 @@ export default function PageCommunaute({showCommunaute}) {
           ]}
           title="Ce que tu vas trouver chez NO BULLSH*T"
         />
-      </div>   
+      </div>  
+      {/*-----------------------------5 FIN CONTENEUR A */} 
 
 
 
@@ -164,7 +166,7 @@ export default function PageCommunaute({showCommunaute}) {
           </ol>
         </CardVImgTxt>
       </div>
-
+      {/* -----------------------------6 FIN CONTENEUR A */}
 
 
 
@@ -189,6 +191,7 @@ export default function PageCommunaute({showCommunaute}) {
           </div>
         </div>
       </div>  
+      {/*-----------------------------7 FIN CONTENEUR A */}
 
 
 
@@ -200,24 +203,51 @@ export default function PageCommunaute({showCommunaute}) {
         <div className="grid  grid-cols-1 gap-0 ">
 
           {/*-----8.2.1 DEBUT COMPONENT  Carde verticale titre texte  */}
-          <CardHTxtImg imageSrc="" title="Prêt(e) à quitter le monde “tout est rose” et rejoindre un espace où la sincérité prime ?">
+          <CardHTxtImg imageSrc="communauteEvent.webp" title="Nos Événements">
             <p>
-            Candidater maintenant. Nous t’attendons du côté “vrai” de l’entrepreneuriat. 
+            Découvrez nos journées thématiques et rencontrez la communauté hors du cadre pro ! 
             </p>
           </CardHTxtImg>
 
 
           {/*-----8.2.3 DEBUT CONTENEUR A */}
           <div className="bg-transparent flex justify-center items-center mb-20">
-            <BoutonCandidate title="Candidater" />
+            <BoutonEvent title="En savoir plus" />
           </div>
         </div>
       </div>  
+      {/*-----------------------------8 FIN CONTENEUR A */}
 
 
 
 
-   
+      {/*-----------------------------9 DEBUT CONTENEUR A */}
+      <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
+        <div className="grid grid-cols-1 gap-0">
+          <CardVTitreTxt title="La NO BULLSH*T Newsletter : Restez au cœur de l’action">
+            <p>
+            Vous en avez assez des emails remplis de promesses en carton ?
+            <br></br>
+            Nous aussi. Bienvenue dans la <strong>NO BULLSH*T Newsletter</strong>, un concentré d’info brute, d’astuces franc-parlées et d’opportunités concrètes.
+
+            <br></br>
+            <br></br>
+            
+            <strong>Pourquoi s’inscrire ?</strong>
+            <br></br>
+            Accès à des dossiers premium, invitations aux débats/événements en avant-première, offres spéciales réservées.
+            </p>
+          </CardVTitreTxt>
+
+          <div className="bg-transparent flex justify-center items-center mb-20">
+            <BoutonNewsLetter title="Je M’inscris Maintenant" />
+          </div>
+        </div>
+      </div>
+      {/*-----------------------------9 FIN CONTENEUR A */}
+
+
+
     </div>
     );
   }

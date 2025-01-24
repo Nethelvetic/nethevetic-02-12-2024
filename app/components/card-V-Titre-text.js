@@ -11,7 +11,7 @@ const CardVTitreTxt = ({ title, children }) => {
   //------------------------3 Début affichage ---------------------------
   //---------------------------------------------------------------------
   return (
-    //-----------------------------1 DEBUT PRIMAIRE
+    //-----------------------------1 DEBUT CONTENEUR PRIMAIRE
     <div className="flex flex-col  w-full max-w-5xl relative  overflow-hidden  p-4 sm:p-6 md:p-8 lg:p-10">
 
       {/* Titre */}
@@ -26,7 +26,7 @@ const CardVTitreTxt = ({ title, children }) => {
         {children}
       </div>
     </div>
-     //-----------------------------1 FIN PRIMAIRE
+     //-----------------------------1 FIN CONTENEUR PRIMAIRE
   );
 };
 

@@ -103,10 +103,10 @@ export default function PageAccueil({showCommunaute}) {
               "jeroNum391.jpg",
             ]}
             txtBouton={[
-              { label: "Voir plus", url: "/somePage" },
-              { label: "Contact2", url: "/contact" },
-              { label: "Contact3", url: "/contact" },
-              { label: "Contact4", url: "/contact" }
+              { label: "Jérome 1", url: "/somePage" },
+              { label: "Jérome 2", url: "/contact" },
+              { label: "Jérome 3", url: "/contact" },
+              { label: "Jérome 4", url: "/contact" }
             ]}
             txt={[
               "<p><strong>Création d’entreprise rapide.</strong></p><p>Créer ton entreprise en Suisse, en simplifiant toutes les démarches.</p>",

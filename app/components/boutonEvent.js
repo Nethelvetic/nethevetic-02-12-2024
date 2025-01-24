@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-const BoutonCandidate = ({ title }) => {
+const BoutonEvent = ({ title }) => {
   //---------------------------------------------------------------------
   //------------------------1 Début data dynamique ----------------------
   //---------------------------------------------------------------------
@@ -13,10 +13,10 @@ const BoutonCandidate = ({ title }) => {
 
 
   //---------------------------------------------------------------------
-  //------------------------2 Début comportement  -----------------------
+  //------------------------2 Début comportement ----------------------
   //---------------------------------------------------------------------
   const handleClick = () => {
-    router.push('/communauteVIP/candidater');
+    router.push('/communauteVIP/event');
   };
 
 
@@ -35,4 +35,4 @@ const BoutonCandidate = ({ title }) => {
   );
 };
 
-export default BoutonCandidate;
+export default BoutonEvent ;

@@ -4,8 +4,17 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const CardVImgTxt = ({ imageSrc, title, children }) => {
+  //---------------------------------------------------------------------
+  //------------------------1 Début data dynamique ----------------------
+  //---------------------------------------------------------------------
   const imageRef = useRef(null);
 
+
+
+
+  //---------------------------------------------------------------------
+  //------------------------2 Début comportement ------------------------
+  //---------------------------------------------------------------------
   useEffect(() => {
     const el = imageRef.current;
     gsap.set(el, { x: -300, opacity: 0 });
@@ -37,6 +46,12 @@ const CardVImgTxt = ({ imageSrc, title, children }) => {
     return () => observer.disconnect();
   }, []);
 
+
+
+
+  //---------------------------------------------------------------------
+  //------------------------1 Début affichage ---------------------------
+  //---------------------------------------------------------------------
   return (
     <div className="flex flex-col w-full max-w-5xl bg-bg-gradient relative overflow-hidden p-4 sm:p-6 md:p-8 lg:p-10">
       {/* Bloc Image */}

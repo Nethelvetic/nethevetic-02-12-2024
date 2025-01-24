@@ -14,6 +14,13 @@ export default function AnimationLayout({ children }) {
 //---------------------------------------------------------------------
   const pathname = usePathname();
 
+
+  
+
+  //---------------------------------------------------------------------
+  //------------------------2 Début comportement ------------------------
+  //---------------------------------------------------------------------
+
   useEffect(() => {
     // Fonction pour configurer les animations
     const setupAnimations = () => {

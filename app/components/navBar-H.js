@@ -2,14 +2,24 @@
 
 import React, { useState } from 'react';
 
-const NavBarH = ({ items }) => {
+const NavBarH = ({ items, logo }) => {
+  //---------------------------------------------------------------------
+  //------------------------1 Début data dynamique ----------------------
+  //---------------------------------------------------------------------
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
+
+
+  //---------------------------------------------------------------------
+  //------------------------2 Début affichage ---------------------------
+  //---------------------------------------------------------------------
   return (
     <nav className="flex items-center justify-between fixed top-0 left-0 w-full bg-gray-800/70 backdrop-blur-sm py-2 px-6 z-50">
+      {/* Logo via prop */}
       <div className="logo">
         <img 
-          src="LogoNeth.png" 
+          src={logo} 
           alt="Logo" 
           className="h-8 sm:h-12 md:h-14 lg:h-16"
         />
@@ -18,7 +28,11 @@ const NavBarH = ({ items }) => {
       {/* Menu visible sur grand écran */}
       <div className="hidden md:flex space-x-4">
         {items.map((item, index) => (
-          <a key={index} href={item.link} className="text-white hover:text-gray-200 font-openSansRegular">
+          <a 
+            key={index} 
+            href={item.link} 
+            className="text-white hover:text-gray-200 font-openSansRegular"
+          >
             {item.title}
           </a>
         ))}
