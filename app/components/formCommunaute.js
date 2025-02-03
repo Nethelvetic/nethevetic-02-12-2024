@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 function FormCommunaute() {
+
+  //---------------------------------------------------------------------
+  //------------------------1 Début data dynamique ----------------------
+  //---------------------------------------------------------------------
   // États pour chaque champ du formulaire
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -9,6 +13,11 @@ function FormCommunaute() {
   const [acceptCharte, setAcceptCharte] = useState(false);
   const [newsletter, setNewsletter] = useState(false);
 
+
+
+  //---------------------------------------------------------------------
+  //------------------------2 Début comportement ------------------------
+  //---------------------------------------------------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
     // Ici, vous pouvez traiter ou envoyer les données (API, etc.)
@@ -23,6 +32,12 @@ function FormCommunaute() {
     alert("Formulaire soumis avec succès !");
   }; 
 
+
+
+
+//---------------------------------------------------------------------
+  //------------------------3 Début affichage ---------------------------
+  //---------------------------------------------------------------------
   return (
       //-----------------------------1 DEBUT CONTENEUR PRIMAIRE
       <div className="flex flex-col  w-full max-w-5xl relative  overflow-hidden  p-4 sm:p-6 md:p-8 lg:p-10">

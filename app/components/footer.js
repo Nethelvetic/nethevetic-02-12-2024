@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo de l'entreprise */}
         <div className="flex flex-col items-center md:items-start">
           <img
-            src="logoNeth.png"
+            src="/logoNeth.png"
             alt="Logo de l'entreprise"
             className="h-12 mb-2"
           />

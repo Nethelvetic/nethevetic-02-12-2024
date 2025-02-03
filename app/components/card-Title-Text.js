@@ -64,7 +64,7 @@ const CardTitleText = ({ imageSrc, title, children }) => {
     overflow-hidden
     p-4 sm:p-6 md:p-8 lg:p-10
     text-white
-    ${imageSrc ? "" : "bg-bg-gradient"}
+    ${imageSrc ? "imageSrc" : ""}
   `;
 
 
@@ -75,11 +75,14 @@ const CardTitleText = ({ imageSrc, title, children }) => {
 //---------------------------------------------------------------------
   return (
     <div ref={titleRef} style={backgroundStyle} className={containerClasses}>
+
+      {/* Titre */}
       <div className="flex flex-col justify-center w-full relative p-6">
-        <h1 className="flex justify-center font-bebas text-2xl sm:text-3xl md:text-4xl mb-4">
+        <h1 className="flex justify-center font-bebas  bg-bg-gradient text-transparent bg-clip-text
+             text-2xl sm:text-3xl md:text-4xl mb-4">
           {title}
         </h1>
-        <div className="text-base font-openSansRegular sm:text-lg md:text-xl">
+        <div className="text-base text-gray-400 font-openSansRegular sm:text-lg md:text-xl">
           {children}
         </div>
       </div>

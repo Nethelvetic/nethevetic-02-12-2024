@@ -2,11 +2,11 @@ import CardImgTitle from './card-Img-Title';
 import CardHTxtImg from './card-H-txt-Img';
 import CardTitleText from './card-Title-Text'
 import CardVTitreTxt from './card-V-Titre-text';
-import CardVTitre3Img from './card-V-Titre-3Img';
-import BoutonCandidate from './boutonCandidate';
+import CardVTitre3Img from './card-Titre-3Img-3Txt';
+import BoutonCandidate from './btnCandidate';
 import CardVImgTxt from './card-V-Img-txt'
-import BoutonEvent from './boutonEvent';
-import BoutonNewsLetter from './boutonNewsLetter';
+import BoutonEvent from './btnEvent';
+import BoutonNewsLetter from './btnNewsLetter';
 
 
 
@@ -38,8 +38,8 @@ export default function PageCommunaute({showCommunaute}) {
       {/*-----------------------------2 DEBUT CONTENEUR A */}
       <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
         <CardImgTitle
-          imageSrc="communaute3.webp"
-          title={<span className="text-white">Bienvenue dans la Communauté “NO BULLSH*T"</span>}/>
+          imageSrc="jeroNum471.jpg"
+          title="Bienvenue dans la Communauté ''NO BULLSH*T''"/>
       </div>
 
       
@@ -48,7 +48,7 @@ export default function PageCommunaute({showCommunaute}) {
       {/*-----------------------------3 DEBUT CONTENEUR A */}
       <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="grid grid-cols-1 gap-0">
-          <CardVTitreTxt title="On ne veut pas entendre “tout va bien”. On veut la réalité.">
+          <CardTitleText title="On ne veut pas entendre “tout va bien”. On veut la réalité.">
             <p>
             Tu en as assez de ces réseaux d’entrepreneurs <i>où tout le monde est beau, tout le monde est gentil</i>, et où personne n’ose parler des vrais problèmes ? Nous aussi.
             
@@ -57,7 +57,7 @@ export default function PageCommunaute({showCommunaute}) {
             
             Ici, on aborde <strong> les vrais chiffres, les vrais échecs</strong>, et les vrais doutes sans fard. Parce que c’est en analysant ce qui ne va pas qu’on apprend à avancer <strong> pour de vrai.</strong>
             </p>
-          </CardVTitreTxt>
+          </CardTitleText>
 
           <div className="bg-transparent flex justify-center items-center mb-20">
             <BoutonCandidate title="Candidater" />
@@ -71,8 +71,8 @@ export default function PageCommunaute({showCommunaute}) {
       {/*-----------------------------4 DEBUT CONTENEUR A */}
       <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
 
-        <CardTitleText imageSrc="" title="Notre ADN : la confrontation pour construire">
-        <p>
+        <CardVTitreTxt imageSrc="" title="Notre ADN : la confrontation pour construire">
+           <p>
             <strong>Assez de la complaisance</strong> où tout le monde hoche la tête en mode “super idée, j’adore”.
             Dans la Communauté NO BULLSH*T, on organise des <strong>débats</strong> (voire des fights bienveillants) :
           </p>
@@ -93,7 +93,7 @@ export default function PageCommunaute({showCommunaute}) {
             On se dit les choses, on se confronte aux visions différentes. Et c’est dans ce choc d’idées que naît l’innovation.
           </p>
 
-        </CardTitleText>
+        </CardVTitreTxt>
       </div>
       {/*-----------------------------4 FIN CONTENEUR A */}
 
@@ -126,12 +126,12 @@ export default function PageCommunaute({showCommunaute}) {
 
 
       {/* -----------------------------6 DEBUT CONTENEUR A */}
-      <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10"> 
         {/* ----------------6.1 DEBUT COMPONENT Card horizontal texte image */}
-        <CardVImgTxt imageSrc="jeroNum401.jpg" title="Comment rejoindre le Mouvement ?">
+        <CardVImgTxt imageSrc="jeroNum421.jpg" title="Comment rejoindre le Mouvement ?">
           <ol className="list-decimal ml-4">
             <li>
-              <strong>Candidature: </strong>
+              <strong>Candidature </strong>
                 <ul className="list-disc ml-6">
                   <li>
                   Tu remplis un formulaire, où tu expliques tes challenges.
@@ -178,11 +178,11 @@ export default function PageCommunaute({showCommunaute}) {
         <div className="grid  grid-cols-1 gap-0 ">
 
           {/*-----7.2.1 DEBUT COMPONENT  Carde verticale titre texte  */}
-          <CardVTitreTxt title="Prêt(e) à quitter le monde “tout est rose” et rejoindre un espace où la sincérité prime ?">
+          <CardTitleText title="Prêt(e) à quitter le monde “tout est rose” et rejoindre un espace où la sincérité prime ?">
             <p>
             Candidater maintenant. Nous t’attendons du côté “vrai” de l’entrepreneuriat. 
             </p>
-          </CardVTitreTxt>
+          </CardTitleText>
 
 
           {/*-----7.2.3 DEBUT CONTENEUR A */}
@@ -224,7 +224,7 @@ export default function PageCommunaute({showCommunaute}) {
       {/*-----------------------------9 DEBUT CONTENEUR A */}
       <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="grid grid-cols-1 gap-0">
-          <CardVTitreTxt title="La NO BULLSH*T Newsletter : Restez au cœur de l’action">
+          <CardTitleText title="La NO BULLSH*T Newsletter : Restez au cœur de l’action">
             <p>
             Vous en avez assez des emails remplis de promesses en carton ?
             <br></br>
@@ -237,7 +237,7 @@ export default function PageCommunaute({showCommunaute}) {
             <br></br>
             Accès à des dossiers premium, invitations aux débats/événements en avant-première, offres spéciales réservées.
             </p>
-          </CardVTitreTxt>
+          </CardTitleText>
 
           <div className="bg-transparent flex justify-center items-center mb-20">
             <BoutonNewsLetter title="Je M’inscris Maintenant" />

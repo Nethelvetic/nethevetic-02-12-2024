@@ -1,12 +1,12 @@
-"use client";
+"use client"; 
 
-import React, { useState } from "react";
-import 'intersection-observer';
+import React, { useEffect } from "react";
+import AnimationLayout from '../components/animationLayout';
+import PageCreerEntreprise from '../components/pageCreerEntreprise';
 
 
 
-
-export default function HomePage() {
+const CreationEntreprise = () => {
 
 
 //---------------------------------------------------------------------
@@ -14,31 +14,20 @@ export default function HomePage() {
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
-//------------------------2 Début fonctions ---------------------------
+//------------------------2 Début comportement ------------------------
 //---------------------------------------------------------------------
 
 //---------------------------------------------------------------------
 //------------------------2 Début comportement ------------------------
-//---------------------------------------------------------------------
+//--------------------------------------------------------------------- 
   return (
-    <div>
-        <h1>Page d'envent</h1>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-    </div>
-
+    <AnimationLayout>
+      <div>
+      <PageCreerEntreprise/>
+      </div>
+    </AnimationLayout>
+  
   );
-}
+};
+
+export default CreationEntreprise;

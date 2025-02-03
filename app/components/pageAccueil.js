@@ -1,10 +1,11 @@
 import CardImgTitle from './card-Img-Title';
 import CardHTxtImg from './card-H-txt-Img';
 import CardVImgTxt from './card-V-Img-txt';
-import CardVTitreTxt from './card-V-Titre-text';
-import CardVTitre3Img from './card-V-Titre-3Img';
-import BoutonChatBot from './boutonChatBot';
-import BoutonCommunaute from './boutonCommunaute';
+import CardTitleText from './card-Title-Text';
+import CardVTitre3Img from './card-Titre-3Img-3Txt';
+import BoutonChatBot from './btnChatBot';
+import BoutonCommunaute from './btnCommunaute';
+import BtnCreerEntreprise from './btnCreerEntreprise';
 
 
 
@@ -36,7 +37,7 @@ export default function PageAccueil({showCommunaute}) {
         <div className="bg-transparent flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
   
           {/*----------------5.1 DEBUT COMPONENT image et titre  */}
-          <CardImgTitle imageSrc="jeroNum21Bg.png" title="Simplifie ton entreprise"/>
+          <CardImgTitle imageSrc="jeroNum521.jpg" title="Simplifie ton entreprise"/>
         </div>
   
   
@@ -49,11 +50,11 @@ export default function PageAccueil({showCommunaute}) {
             <div className="grid  grid-cols-1 gap-0 ">
   
               {/*-----2.1.1 DEBUT COMPONENT  Carde V titre texte  */}
-              <CardVTitreTxt title="Rejoignez notre programme et accédez à une communauté d’entrepreneurs.">
+              <CardTitleText title="Rejoignez nous et accédez à une communauté d’entrepreneurs.">
                 <p>
                   Partagez vos expériences, apprenez des autres et collaborez pour propulser votre activité au niveau supérieur. 
                 </p>
-              </CardVTitreTxt>
+              </CardTitleText>
   
               {/*-----2.1.2 DEBUT CONTENEUR A */}
               <div className="bg-transparent flex justify-center items-center mb-20">
@@ -149,11 +150,11 @@ export default function PageAccueil({showCommunaute}) {
           <div className="grid  grid-cols-1 gap-0 ">
   
             {/*-----7.2.1 DEBUT COMPONENT  Carde verticale titre texte  */}
-            <CardVTitreTxt title="Découvrez par vous-même comment vous simplifier la vie">
+            <CardTitleText title="Découvrez par vous-même comment vous simplifier la vie">
               <p>
               Posez une question ou donnez une tâche, et voyez comment un assistant IA peut travailler à votre place. 
               </p>
-            </CardVTitreTxt>
+            </CardTitleText>
   
   
             {/*-----7.2.3 DEBUT CONTENEUR A */}
@@ -184,7 +185,7 @@ export default function PageAccueil({showCommunaute}) {
                 {/*---9.3 DEBUT CONTENEUR C */}
                 <div className="bg-transparent  flex justify-center items-center mb-20 mt-3"> 
                   {/* DEBUT COMPONENT  bouton via page communauter  */}
-                  <BoutonChatBot title="test mon chatbot"/>
+                  <BtnCreerEntreprise title="Prêt(e) à franchir le pas ?"/>
                 </div>
              </div>
              
